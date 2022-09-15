@@ -1,8 +1,11 @@
-import EditorJS from "@editorjs/editorjs";
+import EditorJS, { OutputData } from "@editorjs/editorjs";
 import Header from "@editorjs/header";
 import List from "@editorjs/list";
 import { Button, Paper, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
+import { SimpleImage } from "./plugins";
+
+//I have a deeper understanding of internalisation. As a result, I did not add it to the project I am doing.
 
 let mounted = false;
 
@@ -19,11 +22,27 @@ function App() {
             class: Header,
             inlineToolbar: ["link"],
           },
+
           list: {
             class: List,
             inlineToolbar: true,
           },
+          image: SimpleImage,
         },
+
+        data: {
+          time: 1552744582955,
+          blocks: [
+            {
+              type: "image",
+              data: {
+                url: "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg",
+              },
+            },
+          ],
+          version: "2.11.10",
+        },
+        
         onReady: () => {
           setEditor(editor);
 
