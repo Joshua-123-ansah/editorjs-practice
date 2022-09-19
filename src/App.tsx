@@ -72,7 +72,7 @@ function App() {
 
   return (
     <>
-      <Paper elevation={3} sx={{ margin: "50px", height: "700px" }}>
+      <Paper elevation={3} sx={{ margin: "50px", height: "1000px" }}>
         <div id="editorjs"></div>
       </Paper>
       <Typography align="center">
